@@ -25,3 +25,22 @@ Partitions and offsets
     - E.g. offset 3 in partition 0 doesn't represent the same data as offset 3 in partition 1
     - Offset are not re-used even if previous message have been deleted
 - Order is guaranteed only within a partition(not across partitions)
+- data is assigned randomly to a partition unless a key is provided
+- You can have as many partitions per topic as you want.
+
+
+
+
+PRODUCERS
+-----------------
+
+- Producers write data to topics(which are made of partitions)
+- Producers know to which partition to write to( and which kafka broker has it)
+- In case of kafka broker failures, Producers will automatically recover.
+    - The load is balanced to many brokers thanks to the number of partitions
+
+
+Producers : Message keys
+- Producers can choose to send a key with the message(Optional) [string, number, binary]
+- if key=null, data is sent round robin(partition 0, then 1, then 2)
+- If key!=null, then all messages for that key will always go to the same partition(hashing)
