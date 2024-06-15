@@ -1,0 +1,20 @@
+Kafka Topics
+-----------------
+
+- A particular stream of data
+- Like a table in a database(without all the contraints)
+- You can have as many topics as you want
+- A topic is identified by its name
+- Supports any type of message format(JSON, AVRO, TXT etc)
+- The sequence of messages is called a data stream.
+- You cannot query topics, instead , use kafka producers to send data and kafka consumers to read the data
+
+
+Partitions and offsets
+------------------------
+
+- Topics are split in partitions(example, 100 partitions)
+- Messages send to topics are endup in these partitions
+    - Messages within each partition are ordered
+    - Each message within a partition gets an incremental id, called offset
+- kafka topics are immutable : once data is written to a partition , it cannot be changed
