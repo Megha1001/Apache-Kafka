@@ -5,6 +5,8 @@ Kafka Use Cases
 - Gather metrics from differnt locations
 - Application logs gathering
 - Stream processing(with kafka Stream API for example)
+- Integration with Spark, Hadoop, flink and many BIg Data techs
+- Can be used as microservice pub/sub
 
 Kafka Topics
 -----------------
