@@ -8,6 +8,8 @@ Kafka Use Cases
 - Integration with Spark, Hadoop, flink and many BIg Data techs
 - Can be used as microservice pub/sub
 
+REMEMBER THAT KAKFA IS ONLY USED AS A TRANSPORTATION MECHANISM
+
 Kafka Topics
 -----------------
 
