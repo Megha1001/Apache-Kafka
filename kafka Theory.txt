@@ -1,3 +1,11 @@
+Kafka Use Cases
+-----------------
+- Messaging System
+- Activity Tracking
+- Gather metrics from differnt locations
+- Application logs gathering
+- Stream processing(with kafka Stream API for example)
+
 Kafka Topics
 -----------------
 
