@@ -86,3 +86,5 @@ Record -> .send() -> Producer Partitioner  logic -> Assign partition1 -> Partiti
 - Key hashing is the process of determining the mappint of a key to a partition.
 - In the default kafka partitioner, the keys are hashed using the murmur2 algorithm, with the formula
     targetPartition = Math.abs(Utils.murmur2(keyBytes))%(numPartitions - 1)
+
+THIS IS JUST TO STRESS THE FACT THAT PRODUCERS ARE THE ONE WHO CHOOSE IN WHICH PARTITION MESSAGE IS SENT TO
