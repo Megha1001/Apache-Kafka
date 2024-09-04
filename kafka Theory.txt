@@ -134,3 +134,19 @@ Consumer Offsets
 - When a consumer in a group has processed data received from kafka, it should be periodically committig the offsets (the kafka broker will write to __consumer_offsets, not the group itself) --> that's why consumer within 
 consumer group reads exclusively.
 - If a consumer dies, it will be able to read back fro where it left off thanks to the committed cosumer offsets!
+
+
+Deliver semantics for consumers
+----------------------------------
+- By default, Java consumers will automaticaly commit offsets(at least once)
+- There are 3 delivery semantics if you choose to commit manually
+- At least once(Usually preferred)
+    - Offsets are committed after the mesage is processed
+    - If the procesing goes wrong, the message will be read again
+    - This can result in duplicate processing of message, Make sure your processing is idempotent(i.e. processing again the messages won't impact your systems)
+- At most once
+    - Offsets are commited as soon as messages are received
+    - If the processing goes wrong, some messages will be lost(they won't rbe read again)
+- Exactly once
+    - For kafka => kafka workflows : use the transactional API(easy with Kafka Streams API)
+    - For Kafka => Exteral System workflows : use an idempotent consumer
