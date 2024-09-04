@@ -208,3 +208,19 @@ Kakfa Topic durability
 ----------------------
 - For a topic replication factor of 3, topic data durability can withstand 2 brokers loss
 - As a rule, for a replication factor of N, you can permanently lose up  to N-1 brokers and still recover your data
+
+
+
+ZOOKEEPER
+----------
+- Zookeeper managers brokers(keeps a list of them)
+- Its a software, its like a companion to brokers
+- Zookeeper helps in performing leader election for partitions(If brokers goes down zookeeper helps to elect new leader)
+- Zookeeeper sends notifiction to Kafka/ kafka broker in case of changes
+(e.g. new topic, broker dies, borker comes up, delete topics etc)
+
+KAFKA 2.X CAN'T WORK WITHOUT ZOOKEEPER
+KAFKA 3.X CAN WORK WITHOUT ZOOKEEPER(KIP-500)- USING KAKFKA RAFT(AKA KRAFT) INSTEAD
+KAFKA 4.X WILL NOT HAVE ZOOKEEPER
+
+- Zookeeper by design  operates with an odd number of servers(1,3,5,7)
