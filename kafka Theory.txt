@@ -172,3 +172,8 @@ Topic replication factor
 --------------------------
 - Topics should have a replication factor >1 (usually between 2 and 3) (2 : total 2 entities will be there(1original + 1 copy))
 - This way if a broker is down, another broker can serve the data
+
+Conf Leader for a partition
+----------------------------
+- At any time only ONE broker can be a leader for a given partition
+- Producers can only send data to the broker that is leader of a partition
