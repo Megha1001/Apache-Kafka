@@ -120,3 +120,7 @@ Consumer Groups
 -------------------
 - All the consumers in an application read data as a consumer groups.
 - Each consumer within a group reads from exclusive partitions.
+
+What if too many consumers ?
+- If you have more consumers than partitions, some consumers will be inactive.
+
