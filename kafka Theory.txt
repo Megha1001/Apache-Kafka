@@ -57,3 +57,22 @@ Producers : Message keys
 - if key=null, data is sent round robin(partition 0, then 1, then 2)
 - If key!=null, then all messages for that key will always go to the same partition(hashing)
 - A key are typically sent if you need messages ordering for a specific field(ex : truck_id) [Two keys can endup in the same partition after hashing]
+
+
+Kafka Message Anantomy
+-------------------------
+- See image attached
+
+Kafka Message Serializer
+---------------------------
+- Kafka only accepts bytes as an input from producers and sends bytes out as an output to consumers.
+- Message serialization means tranforming objects/data into bytes.
+- They are used on the value and the key.
+    - Ex :
+        - Key Object (123) -> int -> keySerializer=IntergerSerializer -> bytes -> key-binary(01110011)
+        - Value Object ("Hello World") -> String -> ValueSerializer=StringSerializer -> bytes -> Value-binary(01101110101010111100001101)
+- Common Serializer
+    - String(incl. JSON)
+    - Int, Float
+    - Avro
+    - Protobuf
