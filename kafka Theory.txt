@@ -243,3 +243,19 @@ With Kafka Clients
     - All the APIs and commands that were previously leveraging Zookeeper are migrated to use kafka instead , so that when clusteer are migrated to be without zookeeper , the change is invisible to clients.
     - Zookeeper less secure than kafka, and therefore zookeeper ports should only be opened to allow traffic from kafka brokers, and not kafka clients
     - Therefore, to be a great modern-day kafka developer, never ever use zookeeer as a configuration in your kafka-clients, and other programs that connect to kafka.
+
+
+
+
+KAFKA KRAFT
+------------
+- In 2020, the apache kafka project started to work to remove zookeeper dependency from it(KIP-500)
+- Zookeeper shows scaling issues when kafka clusters have > 100,000 partitions
+- By removing zookeeper , apache kafka can
+    - scale to millions of partitions, and becomes easier to maintain and setup
+    - improve stability, makes it easier to monitor, support and administer
+    - Single securtiy model for the whole system
+    - single process to start with kafka
+    - Faster controller shutdown and recovery time
+
+- Kafka 3.X now implements the Raft protocol(KRaft) in order to replace zookeeper.
