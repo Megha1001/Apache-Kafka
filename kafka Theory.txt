@@ -226,3 +226,17 @@ KAFKA 4.X WILL NOT HAVE ZOOKEEPER
 - Zookeeper by design  operates with an odd number of servers(1,3,5,7). Here 1, 3, 5, 7 are number of zookeepers
 - Zookeeper has a leader(writes) the rest of the server are followwers(reads)
 - Zookeeper does NOT store consumer offsets with kafka>0v0.10 (as we store it in interal __consumer_offset topic now)
+
+
+Should you use Zookeeper ?
+-------------------------
+With kafka Brokers ?
+ - if we are managing kafka brokers the Yes, until kafka 4.0 is out while waiting for kafka without zookeeper to be production ready
+
+
+With Kafka Clients
+    - Earlier producer, consumers brokers used to connect with zookeeper but not anymore they have been migrated
+
+    - OVertime, the kafka clients and CLI have been migrated to leverage the brokers as a connection endpoint instead of ZOokeeper(basically kafka clients and CLI can connect to kafka brokers directly)
+    - Since kafka 0.10, consumers store offset in kafka  and must not connect to zookeeper as its deprecated(earlier offset stores in zookeeper but not anymore)
+    - Since kafka 2.2, the kafka-topics.sh CLI command reference kafka brokers not zookeepr for topic management(creation, deletion, etc....) and the Zookeeper CLI argument is deprecated.
