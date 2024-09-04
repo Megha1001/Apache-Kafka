@@ -150,3 +150,11 @@ Deliver semantics for consumers
 - Exactly once
     - For kafka => kafka workflows : use the transactional API(easy with Kafka Streams API)
     - For Kafka => Exteral System workflows : use an idempotent consumer
+
+
+KAFKA BROKERS
+-------------
+- A kafka cluster is composed of multiple brokers(servers)
+- Each broker is identified with its ID(Integer)
+- Each broker contains certain topic partitions(meaning your data is going to be distributes across all brokers)
+- After connecting to any broker(called a boostrap broker), you will be connected to the entire cluster(kafka clients have smart mechanics for that)
