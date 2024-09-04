@@ -158,3 +158,10 @@ KAFKA BROKERS
 - Each broker is identified with its ID(Integer)
 - Each broker contains certain topic partitions(meaning your data is going to be distributes across all brokers)
 - After connecting to any broker(called a boostrap broker), you will be connected to the entire cluster(kafka clients have smart mechanics for that)
+
+
+kafka Broker Discovery
+--------------------------
+- Every kafka broker is also called a "bootstrap server"
+- That mean that you only need to connect to one broker, and the kafka clients will know how to be connected to the entire cluster(smart clients)
+- Eacg broker knows about all brokers, topics and partitions(metadata)
