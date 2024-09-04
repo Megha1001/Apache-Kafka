@@ -1,3 +1,5 @@
+************KAFKA THEORY************
+
 Kafka Use Cases
 -----------------
 - Messaging System
@@ -263,3 +265,6 @@ KAFKA KRAFT
     - Kakfa 4.0 will be released only with KRaft(no Zookeeper)
 
 See Kakfa KRaft Architecture -> Attached
+
+
+THEORY ROUNDUP`
