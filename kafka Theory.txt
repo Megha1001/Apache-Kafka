@@ -56,4 +56,4 @@ Producers : Message keys
 - Producers can choose to send a key with the message(Optional) [string, number, binary]
 - if key=null, data is sent round robin(partition 0, then 1, then 2)
 - If key!=null, then all messages for that key will always go to the same partition(hashing)
-- A key are typically sent if you need messages ordering for a specific field(ex : truck_id)
+- A key are typically sent if you need messages ordering for a specific field(ex : truck_id) [Two keys can endup in the same partition after hashing]
