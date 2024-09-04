@@ -107,4 +107,11 @@ Consumer Deserializer
     - Ex :
         - key-binary(01110011) -> bytes -> keyDeserializer=IntergerDeserializer -> int -> Key Object (123)
         - Value-binary(01101110101010111100001101) ->bytes -> ValueDeserializer=StringDeserializer ->   String-> Value Object ("Hello World")
+- Common Deserializer
+    - String(incl. JSON)
+    - Int, Float
+    - Avro
+    - Protobuf
+
+Note : The serialization/deserialization type must not change during the topic lifecycle(create a new topic instead)
 
