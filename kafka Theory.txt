@@ -241,3 +241,5 @@ With Kafka Clients
     - Since kafka 0.10, consumers store offset in kafka  and must not connect to zookeeper as its deprecated(earlier offset stores in zookeeper but not anymore)
     - Since kafka 2.2, the kafka-topics.sh CLI command reference kafka brokers not zookeepr for topic management(creation, deletion, etc....) and the Zookeeper CLI argument is deprecated.
     - All the APIs and commands that were previously leveraging Zookeeper are migrated to use kafka instead , so that when clusteer are migrated to be without zookeeper , the change is invisible to clients.
+    - Zookeeper less secure than kafka, and therefore zookeeper ports should only be opened to allow traffic from kafka brokers, and not kafka clients
+    - Therefore, to be a great modern-day kafka developer, never ever use zookeeer as a configuration in your kafka-clients, and other programs that connect to kafka.
