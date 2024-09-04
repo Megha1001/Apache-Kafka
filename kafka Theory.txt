@@ -202,3 +202,9 @@ Producer Acknowledgements(acks)
     - acks=0 : Producer won't wait for acknowledgemnt(possible data loss)
     - acks=1 : Producer will wait for leader acknowledgement(limited data loss)
     - acks=2 : Producder will wait for leader + replicas acknowledgment(no data loss)
+
+
+Kakfa Topic durability
+----------------------
+- For a topic replication factor of 3, topic data durability can withstand 2 brokers loss
+- As a rule, for a replication factor of N, you can permanently lose up  to N-1 brokers and still recover your data
