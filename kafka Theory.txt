@@ -240,3 +240,4 @@ With Kafka Clients
     - OVertime, the kafka clients and CLI have been migrated to leverage the brokers as a connection endpoint instead of ZOokeeper(basically kafka clients and CLI can connect to kafka brokers directly)
     - Since kafka 0.10, consumers store offset in kafka  and must not connect to zookeeper as its deprecated(earlier offset stores in zookeeper but not anymore)
     - Since kafka 2.2, the kafka-topics.sh CLI command reference kafka brokers not zookeepr for topic management(creation, deletion, etc....) and the Zookeeper CLI argument is deprecated.
+    - All the APIs and commands that were previously leveraging Zookeeper are migrated to use kafka instead , so that when clusteer are migrated to be without zookeeper , the change is invisible to clients.
