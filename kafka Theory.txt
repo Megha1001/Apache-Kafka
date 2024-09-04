@@ -186,3 +186,10 @@ Default Producer and consumer behavior with leaders
 - Kafka producers can only write to the leader broker for a partition
 - Kafka consumers by default will read form the leader broker for a partition
 
+
+Kafka consumers Replica Fetching (Kafka v2.4+)
+-----------------------------------------------
+- Since Kafka v2.4, its possible to configure consumers to read form the closest replica
+- This may help improve latency, and also decrease netwrok costs if using the cloud
+
+Producer -----> Broker101(Topic-A Partition)(Leader)) --> replication --> Broker102(Topic-A(Partition0(ISR))) --> consumer can read from Broker102
