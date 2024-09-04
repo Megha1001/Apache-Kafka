@@ -131,3 +131,6 @@ Consumer Offsets
 --------------------
 - kafka stores the offset at which a consumer group has been reading
 - The offsets committed kafka topic named __consumer_offsets
+- When a consumer in a group has processed data received from kafka, it should be periodically committig the offsets (the kafka broker will write to __consumer_offsets, not the group itself) --> that's why consumer within 
+consumer group reads exclusively.
+- If a consumer dies, it will be able to read back fro where it left off thanks to the committed cosumer offsets!
