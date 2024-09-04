@@ -165,3 +165,10 @@ kafka Broker Discovery
 - Every kafka broker is also called a "bootstrap server"
 - That mean that you only need to connect to one broker, and the kafka clients will know how to be connected to the entire cluster(smart clients)
 - Eacg broker knows about all brokers, topics and partitions(metadata)
+
+
+
+Topic replication factor
+--------------------------
+- Topics should have a replication factor >1 (usually between 2 and 3) (2 : total 2 entities will be there(1original + 1 copy))
+- This way if a broker is down, another broker can serve the data
