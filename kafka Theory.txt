@@ -193,3 +193,12 @@ Kafka consumers Replica Fetching (Kafka v2.4+)
 - This may help improve latency, and also decrease netwrok costs if using the cloud
 
 Producer -----> Broker101(Topic-A Partition)(Leader)) --> replication --> Broker102(Topic-A(Partition0(ISR))) --> consumer can read from Broker102
+
+
+
+Producer Acknowledgements(acks)
+--------------------------------
+- PRocducers can choose to receive acknowledgment of data writes:
+    - acks=0 : Producer won't wait for acknowledgemnt(possible data loss)
+    - acks=1 : Producer will wait for leader acknowledgement(limited data loss)
+    - acks=2 : Producder will wait for leader + replicas acknowledgment(no data loss)
