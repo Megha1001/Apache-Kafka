@@ -76,3 +76,13 @@ Kafka Message Serializer
     - Int, Float
     - Avro
     - Protobuf
+
+
+Kakfa Message Key Hashing
+---------------------------
+- A kafka partitioner is a code logic that takes a record and determines to which partitin to sent it into.
+Record -> .send() -> Producer Partitioner  logic -> Assign partition1 -> Partition1
+
+- Key hashing is the process of determining the mappint of a key to a partition.
+- In the default kafka partitioner, the keys are hashed using the murmur2 algorithm, with the formula
+    targetPartition = Math.abs(Utils.murmur2(keyBytes))%(numPartitions - 1)
