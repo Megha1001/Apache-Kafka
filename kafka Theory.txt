@@ -101,3 +101,10 @@ CONSUMERS
 
 Consumer Deserializer
 -----------------------
+- Deserialize indicates how to transform bytes into objects/data
+- Consumers should know in advance in which format your data is
+- They are used on the value and key of the message(since we serialized them only when sending to kafka in producer)
+    - Ex :
+        - key-binary(01110011) -> bytes -> keyDeserializer=IntergerDeserializer -> int -> Key Object (123)
+        - Value-binary(01101110101010111100001101) ->bytes -> ValueDeserializer=StringDeserializer ->   String-> Value Object ("Hello World")
+
