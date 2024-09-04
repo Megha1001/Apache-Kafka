@@ -47,7 +47,7 @@ PRODUCERS
 -----------------
 
 - Producers write data to topics(which are made of partitions)
-- Producers know to which partition to write to( and which kafka broker has it)
+- Producers know to which partition to write to( and which kafka broker has it). Producer decided in which partition data to write to not kafka servers.
 - In case of kafka broker failures, Producers will automatically recover.
     - The load is balanced to many brokers thanks to the number of partitions
 
