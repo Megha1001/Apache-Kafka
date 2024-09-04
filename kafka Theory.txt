@@ -223,4 +223,6 @@ KAFKA 2.X CAN'T WORK WITHOUT ZOOKEEPER
 KAFKA 3.X CAN WORK WITHOUT ZOOKEEPER(KIP-500)- USING KAKFKA RAFT(AKA KRAFT) INSTEAD
 KAFKA 4.X WILL NOT HAVE ZOOKEEPER
 
-- Zookeeper by design  operates with an odd number of servers(1,3,5,7)
+- Zookeeper by design  operates with an odd number of servers(1,3,5,7). Here 1, 3, 5, 7 are number of zookeepers
+- Zookeeper has a leader(writes) the rest of the server are followwers(reads)
+- Zookeeper does NOT store consumer offsets with kafka>0v0.10 (as we store it in interal __consumer_offset topic now)
