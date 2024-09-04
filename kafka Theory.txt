@@ -123,4 +123,5 @@ Consumer Groups
 
 What if too many consumers ?
 - If you have more consumers than partitions, some consumers will be inactive.
-
+- In apache kafka its acceptable to have multiple consumer group on the same topic
+- To create distinct consumer groups, use the consumer property group.id
