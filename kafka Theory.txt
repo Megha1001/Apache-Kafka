@@ -88,3 +88,16 @@ Record -> .send() -> Producer Partitioner  logic -> Assign partition1 -> Partiti
     targetPartition = Math.abs(Utils.murmur2(keyBytes))%(numPartitions - 1)
 
 THIS IS JUST TO STRESS THE FACT THAT PRODUCERS ARE THE ONE WHO CHOOSE IN WHICH PARTITION MESSAGE IS SENT TO
+
+
+
+CONSUMERS
+----------
+- Consumers read data from the topic(identified by name) - pull model
+- Consumers automatically know which borker to read from
+- In case of broker failures, consumers know how to recover
+- Data is read in order from low to high offset within each partitions
+
+
+Consumer Deserializer
+-----------------------
