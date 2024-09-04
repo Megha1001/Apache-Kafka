@@ -164,7 +164,7 @@ kafka Broker Discovery
 --------------------------
 - Every kafka broker is also called a "bootstrap server"
 - That mean that you only need to connect to one broker, and the kafka clients will know how to be connected to the entire cluster(smart clients)
-- Eacg broker knows about all brokers, topics and partitions(metadata)
+- Each broker knows about all brokers, topics and partitions(metadata)
 
 
 
