@@ -178,7 +178,7 @@ Consumer Leader for a partition
 - At any time only ONE broker can be a leader for a given partition
 - Producers can only send data to the broker that is leader of a partition
 - The other brokers wil replicate the data
-- Therefore, eadch partition has one leader and multiple ISR(in-sync replica)
+- Therefore, each partition has one leader and multiple ISR(in-sync replica)
 
 
 Default Producer and consumer behavior with leaders
