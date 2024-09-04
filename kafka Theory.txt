@@ -261,3 +261,5 @@ KAFKA KRAFT
 - Kafka 3.X now implements the Raft protocol(KRaft) in order to replace zookeeper.
     - Production ready since Kafka 3.3.1(KIP-833)
     - Kakfa 4.0 will be released only with KRaft(no Zookeeper)
+
+See Kakfa KRaft Architecture -> Attached
