@@ -295,6 +295,15 @@ Note : We can change the data storage directory
 Alternative to installing kafka --> instead of installing java 11 and kafka binaries --> shortcut is to use brew
 -----------------------------------------------------------------------------------------------------------------
 1. Install brew
-2. Install kafka using brew(will install JAVA JDK for you)
+2. Install kafka using brew(will install JAVA JDK for you)(it will set the PATH as well)
 3. Start zookeeper using the binaries
 4. Start kafka using the binaries in another process
+
+Ref : https://learn.conduktor.io/kafka/how-to-install-apache-kafka-on-mac-with-homebrew/
+
+FOR APPLE CHIP
+to start zookeeper
+/opt/homebrew/bin/zookeeper-server-start /opt/homebrew/etc/zookeeper/zoo.cfg
+
+To start kafka
+/opt/homebrew/bin/kafka-server-start /opt/homebrew/etc/kafka/server.properties
