@@ -278,3 +278,15 @@ ONE KAFKA broker with ZooKeeper
 
 Kafka Cluster
     Broker101       ---> Zookeeper
+
+
+Start Zookeeper in first window
+zookeeper-server-start.sh /Users/megha/kafka_2.13-3.8.0/config/zookeeper.properties
+
+Start Kafka in second window
+kafka-server-start.sh /Users/megha/kafka_2.13-3.8.0/config/server.properties
+
+
+--> Keep it open for further demos
+
+Note : We can change the data storage directory 
