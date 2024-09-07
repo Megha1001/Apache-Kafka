@@ -263,3 +263,18 @@ KAFKA KRAFT
 - Kafka 3.X now implements the Raft protocol(KRaft) in order to replace zookeeper.
     - Production ready since Kafka 3.3.1(KIP-833)
     - Kakfa 4.0 will be released only with KRaft(no Zookeeper)
+
+
+
+KAFKA INSTALLATION
+https://learn.conduktor.io/kafka/how-to-install-apache-kafka-on-mac/
+
+
+
+ONE KAFKA broker with ZooKeeper
+---------------------------------
+1. Start Zookeeper using the binaries
+2. Start kafka using the binaries in another process
+
+Kafka Cluster
+    Broker101       ---> Zookeeper
