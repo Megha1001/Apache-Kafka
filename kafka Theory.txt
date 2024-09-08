@@ -441,3 +441,5 @@ kafka-console-producer --bootstrap-server localhost:9092 --topic first_topic --p
 >example key:example value
 >name:Megha
 >^C (<- Ctrl+C is used to exit the producer)
+
+Note : if in this case we send any message without key seperator it will throw an exception
