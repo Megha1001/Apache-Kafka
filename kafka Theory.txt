@@ -418,5 +418,12 @@ kafka-topics --bootstrap-server localhost:9092 --topic first_topic
 >I am learning Kafka
 >^C (<- Ctrl+C is used to exit the producer)
 
+$producer with property
+kafka-console-producer --bootstrap-server localhost:9092 --topic first_topic --producer-property acks=all
+>some message that is acked
+>just for fun
+>fun learning!
+>^C (<- Ctrl+C is used to exit the producer)
+
 2. Produce with keys
 
