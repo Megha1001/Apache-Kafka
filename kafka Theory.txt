@@ -322,3 +322,20 @@ Start kafka using the binaries
     kafka-server-start.sh /Users/megha/kafka_2.13-3.8.0/config/kraft/server.properties
 
 
+KAFKA CLI
+------------------
+- They come bundled with the kafka binaries
+- If you setup the $PATH variable correctly , then you should be able to invoke the CLI anywhere on your computer
+- Use the --bootstrap-server option everywhere, not --zookeeper
+
+
+
+kafka-topics.sh
+-----------------
+
+Kafka Topic Management
+    - Create kafka topics
+    - List kafka topics
+    - Describe Kafka topics
+    - Increase Partitions in a kafka topic
+    - Delete kafka topics
