@@ -413,10 +413,12 @@ KAFKA CLI : kafka-console-producer.sh
 
 #producing
 kafka-topics --bootstrap-server localhost:9092 --topic first_topic
->Hello World
->My name is Megha
->I am learning Kafka
+>Hello World --> first message
+>My name is Megha --> second message
+>I am learning Kafka --> third message
 >^C (<- Ctrl+C is used to exit the producer)
+
+Note : every time we enter its proc
 
 $producer with property
 kafka-console-producer --bootstrap-server localhost:9092 --topic first_topic --producer-property acks=all
