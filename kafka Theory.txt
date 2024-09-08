@@ -437,4 +437,7 @@ Error
 But in localhost topic will be created but this is not recommended. we should create topic ahead of time
 
 2. Produce with keys
-
+kafka-console-producer --bootstrap-server localhost:9092 --topic first_topic --property parse.key=true --property key.separator=:
+>example key:example value
+>name:Megha
+>^C (<- Ctrl+C is used to exit the producer)
