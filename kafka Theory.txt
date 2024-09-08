@@ -443,3 +443,11 @@ kafka-console-producer --bootstrap-server localhost:9092 --topic first_topic --p
 >^C (<- Ctrl+C is used to exit the producer)
 
 Note : if in this case we send any message without key seperator it will throw an exception
+
+
+KAFKA CLI : kafka-console-consumer.sh
+--------------------------------------
+
+1. Consume from tail of the topics(i.e. consume new messages)
+2. Consume from the beginning fo the topic
+3. Show both key and values in the output
