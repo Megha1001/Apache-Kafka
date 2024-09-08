@@ -307,3 +307,11 @@ to start zookeeper
 
 To start kafka
 /opt/homebrew/bin/kafka-server-start /opt/homebrew/etc/kafka/server.properties
+
+
+One Kafka Broker - KRaft mode(No ZK)
+--------------------------------------
+- Kraft is production ready since kafka 3.3.1
+
+Generate a cluster ID and format the storage using kafka-storage.sh
+Start kafka using the binaries
