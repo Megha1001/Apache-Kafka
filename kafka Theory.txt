@@ -449,5 +449,35 @@ KAFKA CLI : kafka-console-consumer.sh
 --------------------------------------
 
 1. Consume from tail of the topics(i.e. consume new messages)
+
+#create a topic with 3 partitions
+kafka-topics --bootstrap-server localhost:9092 --topic second_topic --create --partitions 3
+
+#to consume right now (not from the previous messages)
+kafka-console-consumer --bootstrap-server localhost:9092 --topic second_topic
+
+
+# other terminal -> start producer
+kafka-console-producer --bootstrap-server localhost:9092 --topic second_topic --producer-property partitioner.class=org.apache.kafka.clients.producer.RoundRobinPartitioner
+
+
 2. Consume from the beginning fo the topic
+
+#to consumer from beginning (Not necessary to be in ordered)
+kafka-console-consumer --bootstrap-server localhost:9092 --topic second_topic --from-beginning
+
+
 3. Show both key and values in the output
+
+#display key, values and timestamp in consumer
+kafka-console-consumer --bootstrap-server localhost:9092 --topic second_topic --formatter kafka.tools.DefaultMessageFormatter --property print.timestamp=true --property print.key=true --property print.value=true --property print.partition=true --from-beginning
+
+
+Output
+WARNING: kafka.tools.DefaultMessageFormatter is deprecated and will be removed in the next major release. Please use org.apache.kafka.tools.consumer.DefaultMessageFormatter instead
+CreateTime:1725797276137	Partition:1	null	Hello World
+CreateTime:1725797334849	Partition:1	null	first message
+CreateTime:1725797288090	Partition:0	null	This is last message
+CreateTime:1725797342675	Partition:0	null	third message
+CreateTime:1725797282499	Partition:2	null	Megha here
+CreateTime:1725797340035	Partition:2	null	second message
