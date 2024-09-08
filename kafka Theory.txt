@@ -317,8 +317,8 @@ Ref : https://learn.conduktor.io/kafka/how-to-install-apache-kafka-on-mac-withou
 
 Generate a cluster ID and format the storage using kafka-storage.sh
     kafka-storage.sh random-uuid
-    kafka-storage.sh format -t <uuid> -c ~/kafka_2.13-3.0.0/config/kraft/server.properties
+    kafka-storage.sh format -t 1CUSSlIuRPOFc7hm-4kOug -c /Users/megha/kafka_2.13-3.8.0/config/kraft/server.properties   
 Start kafka using the binaries
-    
+    kafka-server-start.sh /Users/megha/kafka_2.13-3.8.0/config/kraft/server.properties
 
 
