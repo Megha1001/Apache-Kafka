@@ -402,3 +402,21 @@ kafka-topics.sh --command-config playground.config --bootstrap-server cluster.pl
 
 # delete topics
 kafka-topics.sh --command-config playground.config --bootstrap-server cluster.playground.cdkt.io:9092 --topic second_topic --delete
+
+
+
+
+KAFKA CLI : kafka-console-producer.sh
+---------------------------------------
+
+1. Produce without keys
+
+#producing
+kafka-topics --bootstrap-server localhost:9092 --topic first_topic
+>Hello World
+>My name is Megha
+>I am learning Kafka
+>^C (<- Ctrl+C is used to exit the producer)
+
+2. Produce with keys
+
