@@ -420,12 +420,19 @@ kafka-topics --bootstrap-server localhost:9092 --topic first_topic
 
 Note : every time we enter its proc
 
-$producer with property
+#producer with property
 kafka-console-producer --bootstrap-server localhost:9092 --topic first_topic --producer-property acks=all
 >some message that is acked
 >just for fun
 >fun learning!
 >^C (<- Ctrl+C is used to exit the producer)
+
+#producing to non existing topic
+kafka-console-producer --bootstrap-server localhost:9092 --topic new_topic
+> Hello World!
+
+Error 
+ Error while fetching metadata with correlation id 5 : {new_topic=UNKNOWN_TOPIC_OR_PARTITION} (org.apache.kafka.clients.NetworkClient)
 
 2. Produce with keys
 
