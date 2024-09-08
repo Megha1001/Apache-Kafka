@@ -434,5 +434,7 @@ kafka-console-producer --bootstrap-server localhost:9092 --topic new_topic
 Error 
  Error while fetching metadata with correlation id 5 : {new_topic=UNKNOWN_TOPIC_OR_PARTITION} (org.apache.kafka.clients.NetworkClient)
 
+But in localhost topic will be created but this is not recommended. we should create topic ahead of time
+
 2. Produce with keys
 
