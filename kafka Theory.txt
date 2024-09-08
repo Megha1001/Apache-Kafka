@@ -339,3 +339,19 @@ Kafka Topic Management
     - Describe Kafka topics
     - Increase Partitions in a kafka topic
     - Delete kafka topics
+
+
+Demo
+Note : Make sure your kafka server is started in the background
+
+1. to list the topics
+    kafka-topics --bootstrap-server localhost:9092 --list
+
+2. to create topic
+    kafka-topics --bootstrap-server localhost:9092 --topic first_topic --create
+
+3. To describe the topic
+    kafka-topics --bootstrap-server localhost:9092 --topic first_topic --describe
+
+4. To create topic with partitions and replication factor
+    kafka-topics --bootstrap-server localhost:9092 --topic second_topic --create --partitions 3 --replication-factor 1
