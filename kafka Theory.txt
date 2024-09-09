@@ -481,3 +481,5 @@ CreateTime:1725797288090	Partition:0	null	This is last message
 CreateTime:1725797342675	Partition:0	null	third message
 CreateTime:1725797282499	Partition:2	null	Megha here
 CreateTime:1725797340035	Partition:2	null	second message
+
+Note : As of moment we haven't committed any message, meaning everytime we run above commands it will consumer same messages
