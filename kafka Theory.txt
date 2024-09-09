@@ -461,6 +461,7 @@ kafka-console-consumer --bootstrap-server localhost:9092 --topic second_topic
 kafka-console-producer --bootstrap-server localhost:9092 --topic second_topic --producer-property partitioner.class=org.apache.kafka.clients.producer.RoundRobinPartitioner
 
 Note : Why we used RoundRobin since if we dont use , there are so many built in optimization that we will see data in one partition unless we send 16KB of data.
+the default is great for production settings
 
 2. Consume from the beginning fo the topic
 
