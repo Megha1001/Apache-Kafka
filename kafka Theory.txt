@@ -465,7 +465,7 @@ the default is great for production settings(DON'T USE IN PROD)
 
 2. Consume from the beginning fo the topic
 
-#to consumer from beginning (Not necessary to be in ordered)
+#to consumer from beginning (Not necessary to be in ordered, since messages goes in different partition and data is read in order if message end up in same partitition)
 kafka-console-consumer --bootstrap-server localhost:9092 --topic second_topic --from-beginning
 
 
